@@ -57,8 +57,8 @@ describe('Test on <Navbar />', () => {
                 </AuthContext.Provider>
             </MemoryRouter>
         );
-        const logoutBtn = screen.getByRole('button');
-        fireEvent.click(logoutBtn);
+        const searchBtn = screen.getByRole('button');
+        fireEvent.click(searchBtn);
         expect(contextValue.logout).toHaveBeenCalled();
         expect(mockedUseNavigate).toHaveBeenCalledWith('/login', {replace: true});
 
